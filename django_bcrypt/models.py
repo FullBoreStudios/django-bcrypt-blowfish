@@ -105,7 +105,7 @@ try:
     class LegacyDjangoBCryptPasswordHasher(BCryptPasswordHasher):
         algorithm = 'bc'
 
-    settings.PASSWORD_HASHERS = settings.PASSWORD_HASHERS += [ 'django_bcrypt.models.LegacyDjangoBCryptPasswordHasher', ]
+    
 except ImportError:
     _check_password = User.check_password
     User.check_password = bcrypt_check_password
